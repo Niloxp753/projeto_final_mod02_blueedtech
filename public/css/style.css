@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container {
+    background-color: white;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header {
+    background-color: black;
+    border-bottom-right-radius: 10px;
+    box-shadow: 20px 10px 20px black;
+    height: 15vh;
+    justify-content: start;
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+}
+
+header img {
+    width: 300px;
+    height: 80px;
+    padding: 10px;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+}
+
+main {
+    background: black;
+    flex: 1;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px black;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+nav#principal-nav {
+    background: yellow;
+    width: 20vw;
+    box-shadow: 10px 10px 20px black;
+    border-radius: 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    display: none;
+}
+
+/* nav#modal-nav {
+    display: none;
+} */
+
+/* @media (min-width: 600px) {
+    nav#principal-nav {
+        background: yellow;
+        width: 20vw;
+        box-shadow: 10px 10px 20px black;
+        border-radius: 10px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        display: block;
+    }
+    nav#modal-nav {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    nav#modal-nav {
+    
+        display: block;
+    }
+
+    nav#principal-nav {
+    
+        display: none;
+    }
+} */
+
+footer {
+    background: black;
+    color: #fff;
+    height: 10vh;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    box-shadow: 10px 10px 20px black;
+}
+
+.card_conteiner {
+    background: white;
+    height: 330px;
+    width: 200px;
+    border-radius: 10px;
+    margin: 8px;
+    box-shadow: 10px 10px 20px black;
+    text-decoration: none;
+    font-style: oblique;
+    list-style: none;
+}
+.header_card {
+    display: flex;
+    justify-content: space-around;
+    color: black;
+    gap: 20px;
+    padding: 10px;
+
+}
+
+.main_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.main_card img {
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+.footer_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: black;
+    padding: 10px;
+    gap: 15px;
+}
+
+span.card_model {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+span.card_preco {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
