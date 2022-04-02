@@ -1,11 +1,17 @@
 
 <header>
-   <img src="" alt="Logo Cyber Tech">
-    <nav id="modal-nav">               
+    <div x-data="{ open: false }">
+        <button class="btn_modal" style="display: ;" x-on:click="open = ! open" >Toggle Dropdown</button>        
+        <div x-show="open" @click.outside="open = false">
+            <nav id="principal-nav">              
+                <li>menu interativo</li>
+            </nav>
+        </div>
+    </div>
+   <img src="" alt="Logo Cyber Tech">              
         <form method="post" action="/pesquisa">
             <input name="pesquisar" type="text"/> 
             <button type="submit">Pesquisar</button> 
         </form>
-    </nav>
 </header>
 

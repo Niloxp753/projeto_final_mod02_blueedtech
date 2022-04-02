@@ -7,15 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css" type="text/css">
     <title>Projeto Final Mod 2 BlueEdtech</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
 <body>
     <div class="container">
         <%- include('./partials/header.ejs') %> 
     <div class="content">
-        <nav id="principal-nav">              
-            <li>menu interativo</li>
-        </nav>
         <main>
             <% pcgamers.forEach(element => { %>
             <div class="card_conteiner">

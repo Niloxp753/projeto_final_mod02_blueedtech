@@ -20,10 +20,6 @@ export const hardwares = connection.define('hardwares',{
         type: Sequelize.TEXT,
         allowNull: false,
     },
-    partnumber: {
-        type: Sequelize.TEXT,
-        allowNull: false,
-    },
     descricao: {
         type: Sequelize.TEXT,
         allowNull: false,
