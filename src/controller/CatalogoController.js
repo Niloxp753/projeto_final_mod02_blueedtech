@@ -29,24 +29,19 @@ export const getDetalhes = async (req, res) => {
 
 }
 
-// export const postPesquisa = async (req, res) => {
-//     try {
-//         pcgamers = await hardwares.findAll()
-//         const pesquisa = req.body
-//         pcgamers.forEach(element => {   
-//             element.filter((crt)=>{
-//                 crt === pesquisa.pesquisar
-//             })
-//         });
-//         res.redirect('/')
+export const postPesquisa = async (req, res) => {
+    try {
+        pcgamers = await hardwares.findAll()
+        const pesquisa = req.body
+        res.redirect('/')
+        
+    }
 
-//     }
+    catch(err) {
+        res.send(err.message)
+    }
 
-//     catch(err) {
-//         res.send(err.message)
-//     }
-
-// }
+}
 
 
 
