@@ -127,6 +127,7 @@ footer {
     color: black;
     gap: 20px;
     padding: 10px;
+    font-weight: bold;
 
 }
 
@@ -145,26 +146,25 @@ footer {
 
 .footer_card {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: center;
     color: black;
     padding: 10px;
     gap: 15px;
+    font-weight: bold;
 }
 
-span.card_model {
-    flex-direction: column;
-    flex-wrap: wrap;
+.card_model {
     justify-content: center;
     align-items: center;
     align-content: center;
 }
 
-span.card_preco {
-    flex-direction: column;
-    flex-wrap: wrap;
+.card_preco {
     justify-content: center;
     align-items: center;
     align-content: center;
+    color: red;
 }
