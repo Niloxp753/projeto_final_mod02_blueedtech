@@ -1,7 +1,7 @@
 
 <header>
     <div x-data="{ open: false }">
-        <button class="btn_modal" style="display: ;" x-on:click="open = ! open" >Toggle Dropdown</button>        
+        <button class="btn_modal" x-on:click="open = ! open" >Toggle Dropdown</button>        
         <div x-show="open" @click.outside="open = false">
             <nav id="principal-nav">              
                 <li>menu interativo</li>
