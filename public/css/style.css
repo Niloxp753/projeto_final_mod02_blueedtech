@@ -4,6 +4,7 @@
     border: 0;
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 body {
@@ -12,7 +13,6 @@ body {
     height: 100vh;
     width: 100%;
     position: relative;
-    overflow: scroll;
     background-color: #202026;
 }
 
@@ -48,12 +48,32 @@ body {
     padding-right: 10px;    
 }
 
-form {
+#top_criar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-left: 50px;
+    color: #fff;
+    background-color: #00C0AF;
+    height: 25px;
+    width: 60px;
+    border-radius: 5px;
+
+}
+
+#top_criar:hover {
+    background-color: #04857a;
+    color: #fff;
+}
+
+
+form.form_pesquisar {
     display: flex;
     justify-content: center;
 }
 
-input {
+input.input_pesquisar{
     height: 30px;
     width: 250px;
     border-radius: 6px;
@@ -75,6 +95,7 @@ button img{
     justify-content: center;
     align-items: center;
     width: 26px;
+    margin-left: 5px;
 }
 
 .content {
@@ -89,6 +110,8 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     background-color: #202026;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -127,7 +150,6 @@ footer p a {
     border-radius: 10px;
     margin: 8px;
     box-shadow: 10px 10px 20px black;
-    text-decoration: none;
     font-style: oblique;
     list-style: none;
 }
@@ -138,7 +160,6 @@ footer p a {
     gap: 10px;
     padding: 10px;
     font-weight: bold;
-
 }
 
 .main_card {
@@ -172,10 +193,11 @@ footer p a {
     align-content: center;
 }
 
-.card_data {
+li.card_data {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 #card_edit {
@@ -183,8 +205,51 @@ footer p a {
     top: 5px;
 }
 
+#card_edit:hover {
+    transform: scale(20px);
+}
+
 #card_trash {
     position: relative;
     top: 5px;
     left: 5px;
+}
+
+input {
+    border-end-end-radius: 5px;
+    margin: 10px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+form.form_criar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: solid #00C0AF 1px;
+    width: fit-content;
+    border-radius: 2px;
+    color: #00C0AF;
+    border-radius: 5px;
+}
+
+legend {
+    display: flex;
+    color: #00C0AF;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 20px #00C0AF;
+}
+
+button#button_enviar {
+    background-color: #00C0AF;
+    color: #fff;
+    cursor: pointer;
+}   
+
+button#button_enviar:hover {
+    background-color: #04857a;
+    color: #fff;
 }

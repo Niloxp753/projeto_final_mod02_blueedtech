@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Criar PC Gamer</title>
+</head>
+
+<body>
+    <%-include('./partials/header.ejs')%>
+    <main>
+        <form class="form_criar" action="/criar" method="post">
+
+            <legend> Criar PC Gamer </legend>
+
+            <fieldset>
+                <input type="text" name="modelo">
+                <label for="modelo"> Modelo </label>
+            </fieldset>
+
+            <fieldset>
+                <input type="url" name="img">
+                <label for="img"> Imagem </label>
+            </fieldset>
+
+            <fieldset>
+                <input type="text" name="fabricante">
+                <label for="fabricante"> Fabricante </label>
+            </fieldset>
+
+            <fieldset>
+                <input type="text" name="descricao">
+                <label for="descricao"> Descrição </label>
+            </fieldset>
+
+            <fieldset>
+                <input type="text" name="preco">
+                <label for="preco"> Preço </label>
+            </fieldset>
+
+            <button id="button_enviar" type="submit"> ENVIAR </button>
+        </form>
+    </main>
+    <%-include('./partials/footer.ejs')%>
+</body>
+
+</html>

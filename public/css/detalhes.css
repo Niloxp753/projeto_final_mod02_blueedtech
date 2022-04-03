@@ -38,12 +38,26 @@ body {
     padding-right: 10px;    
 }
 
-form {
-    display: none;
+#top_criar {
+    display: flex;
     justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-left: 50px;
+    color: #fff;
+    background-color: #00C0AF;
+    height: 25px;
+    width: 60px;
+    border-radius: 5px;
 }
 
-input {
+form.form_pesquisar {
+    display: none;
+    justify-content: center;
+
+}
+
+input.input_pesquisar {
     height: 30px;
     width: 250px;
     border-radius: 6px;

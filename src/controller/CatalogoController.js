@@ -1,4 +1,4 @@
-import { resolveInclude } from "ejs"
+
 import { hardwares } from "../model/pcgamer.js"
 
 let pcgamers
@@ -6,7 +6,7 @@ let pcgamers
 export const getIndex = async (req, res) => {
     try {
         pcgamers = await hardwares.findAll({
-            order: [["modelo","ASC"]]
+            order: [["fabricante","ASC"]]
         })
         res.status(200).render('index.ejs', {
             pcgamers,
@@ -36,28 +36,79 @@ export const postPesquisa = async (req, res) => {
     try {
          pcgamers = await hardwares.findAll()
         const pesquisa = req.body
-        res.redirect('/')
+        res.status(200).redirect('/')
        
         
     } catch(err) {
-        res.send(err.message)
+        res.status(500).send({
+            err: err.message
+        })
     }
 
 }
 
-
-
-// export const getDeletar = (req, res) => {
-//     try {
-//         await hardwares.destroy({
-//             where: {
-//                 id: req.params.id
-//             }
-//         })
-//         res.redirect('/')
-//     }
-//     catch(err){
-//         res.send(err.message)
-//     }
+export const getDeletar = async (req, res) => {
+    try {
+        await hardwares.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        res.status(200).redirect('/')
+    }
+    catch(err){
+        res.status(500).send({
+            err: err.message
+        })
+    }
     
-// }
+}
+
+export const getCriar = (req, res) => {
+    res.status(200).render ("criar.ejs")
+}
+
+export const postCriar = async (req, res) => {
+    try {
+        const {modelo, img, fabricante, descricao, preco} = req.body
+        await hardwares.create({
+            modelo, img, fabricante, descricao, preco
+        })
+        res.status(200).redirect('/')
+        
+    } catch (err) {
+        res.status(500).send({
+            err: err.message
+        })
+    } 
+}
+
+export const getEditar = async (req, res) => {
+    const pcgamer = await hardwares.findByPk(req.params.id)
+    res.status(200).render('editar.ejs', {
+        pcgamer
+    })
+}
+
+export const postEditar = async (req, res) => {
+    try {
+        const {modelo, img, fabricante, descricao, preco} = req.body
+        await hardwares.update({
+            modelo: modelo, 
+            img: img, 
+            fabricante: fabricante, 
+            descricao: descricao, 
+            preco: preco
+        }, {
+            where: {
+                id: req.params.id
+            }
+        })
+        res.status(200).redirect('/')
+        
+    } catch (err) {
+        res.status(500).send({
+            err: err.message
+        })
+    }
+}
