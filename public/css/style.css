@@ -162,7 +162,6 @@ footer p a {
     align-content: center;
     color: black;
     padding: 10px;
-    gap: 10px;
     font-weight: bold;
 }
 
@@ -173,3 +172,19 @@ footer p a {
     align-content: center;
 }
 
+.card_data {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+#card_edit {
+    position: relative;
+    top: 5px;
+}
+
+#card_trash {
+    position: relative;
+    top: 5px;
+    left: 5px;
+}
