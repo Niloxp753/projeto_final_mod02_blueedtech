@@ -1,5 +1,5 @@
 
-<header>
+<!-- <header>
     <div x-data="{ open: false }">
         <button class="btn_modal" x-on:click="open = ! open" >Toggle Dropdown</button>        
         <div x-show="open" @click.outside="open = false">
@@ -13,5 +13,22 @@
             <input name="pesquisar" type="text"/> 
             <button type="submit">Pesquisar</button> 
         </form>
-</header>
+</header> -->
 
+<header>
+    <div class="menu">
+        <div class="logo">
+           <a href="/" ><img src="/img/logo.jpg"></a>
+        </div>
+        <div class="form_style">
+            <form method="post" action="/pesquisa">
+                <input name="pesquisar" type="text" /> 
+                <button type="submit"><a href=""><img src="https://img.icons8.com/ios-glyphs/32/000000/search--v1.png"></a></button> 
+            </form>
+        </div>
+        <nav class="menu-items">
+            <a href="" id="card_bar"><img src="https://img.icons8.com/pastel-glyph/32/000000/shopping-trolley--v1.png"></a>
+            <a href="" id="nav_bar"><img src="https://img.icons8.com/windows/32/000000/menu-rounded.png"></a>
+        </nav>
+    </div>
+</header>

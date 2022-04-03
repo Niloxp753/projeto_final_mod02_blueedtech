@@ -2,45 +2,41 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css" type="text/css">
-    <title>Projeto Final Mod 2 BlueEdtech</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/detalhes.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Detalhes</title>
+    <!-- <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> -->
 </head>
 
 <body>
     <div class="container">
-        <%- include('./partials/header.ejs') %> 
-    <div class="content">
-        <nav id="principal-nav">                
-            <li>menu interativo</li>
-        </nav>
+        <%-include('./partials/header.ejs')%>
         <main>
-            <% pcgamers.forEach(element => { %>
-            <div class="card_conteiner">
-                <div class="header_card"> 
-                   <span class="card_diretores">
-                        <%= element.fabricante %>
-                    </span>           
-                   <span class="card_ano">
-                        <%= element.partnumber %>
-                    </span>         
-                </div>                
-                <div class="main_card">
-                    <img src="<%= element.img %>" alt="<%= element.modelo %>">
+            <div class="content">
+                <div class="left_side">
+                    <h1><%= pcgamer.fabricante %></h1>
+                    <h1><%= pcgamer.modelo %></h1>
+                    <p><%= pcgamer.descricao %></p>
+                    <span><%= pcgamer.preco %></span>
+                    <a href="">ADICIONAR AO CARRINHO</a>
                 </div>
-                <div class="footer_card">
-                    <span>
-                        <%= element.modelo %>
-                    </span>
+                <div class="right_side">
+                    <div class="img">
+                        <img src="<%= pcgamer.img %>" alt="<%= pcgamer.modelo %>" />
+                    </div>
                 </div>
             </div>
-            <% }) %>
         </main>
     </div>
-        <footer>barra de pesquisa fixa</footer>
+    <footer>
+        <p>All rights reserved <a target="_blank" href="https://github.com/Niloxp753">Danilo D. Dos Santos &copy;</a></p>
+    </footer>
     </div>
-</body> 
+</body>
 
 </html>

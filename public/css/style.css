@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Poppins',sans-serif;
     border: 0;
     margin: 0;
     padding: 0;
@@ -13,10 +13,11 @@ body {
     width: 100%;
     position: relative;
     overflow: scroll;
+    background-color: #202026;
 }
 
 .container {
-    background-color: white;
+    background-color: #202026;
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -25,23 +26,55 @@ body {
     flex-wrap: wrap;
 }
 
-header {
-    background-color: black;
-    box-shadow: 20px 10px 20px black;
-    height: 60px;
-    width: 100%;
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 80px;
+    margin-left: 15px;
+    margin-top: 4px;
+}
+
+.menu-items a img {
+    width: 26px;
+}
+
+.menu-items a {
+    margin: 5px;
+    padding-right: 10px;    
+}
+
+form {
     display: flex;
     justify-content: center;
-    position: relative;
+}
+
+input {
+    height: 30px;
+    width: 250px;
+    border-radius: 6px;
+    border: solid gray;
+}
+
+.form_style {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-header img {
-    left: 0;
-    position: absolute;
-    width: 300px;
-    height: 80px;
-    padding: 10px;
+button {
+    background-color: rgba(128, 128, 128, 0);
+}
+
+button img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26px;
 }
 
 .content {
@@ -49,27 +82,17 @@ header img {
     display: flex;
 }
 
-.btn_modal {
-    background-color: blue;
-    width: 100px;
-    position: absolute;
-    left: 0;
-    bottom: 2vh;
-    z-index: 1;
-}
-
 main {
-    background: rgb(42, 212, 170);
     flex: 1;
-    border-radius: 10px;
     box-shadow: 10px 10px 20px black;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    background-color: #202026;
 }
 
 
-nav#principal-nav {
+/* nav.menu-items{
     background: yellow;
     width: 20vw;
     height: 100vh;
@@ -79,51 +102,22 @@ nav#principal-nav {
     left: 0;
     top: 0;
     z-index: 0;
-}
 
-
-
-/* nav#modal-nav {
-    display: none;
-} */
-
-/* @media (min-width: 600px) {
-    nav#principal-nav {
-        background: yellow;
-        width: 20vw;
-        box-shadow: 10px 10px 20px black;
-        border-radius: 10px;
-        margin-top: 8px;
-        margin-bottom: 8px;
-        display: block;
-    }
-    nav#modal-nav {
-        display: none;
-    }
-}
-
-@media (max-width: 600px) {
-    nav#modal-nav {
-    
-        display: block;
-    }
-
-    nav#principal-nav {
-    
-        display: none;
-    }
 } */
 
 footer {
-    background: black;
+    background: rgb(80, 78, 78);
     color: #fff;
     height: 10vh;
     align-content: center;
     justify-content: center;
     display: flex;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    box-shadow: 10px 10px 20px black;
+    box-shadow: 10px 10px 20px rgb(59, 59, 59);
+}
+
+footer p a {
+    text-decoration: none;
+    color: #00C0AF;
 }
 
 .card_conteiner {
@@ -173,14 +167,9 @@ footer {
 }
 
 .card_model {
+    margin-top: 10px;
     justify-content: center;
     align-items: center;
     align-content: center;
 }
 
-.card_preco {
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    color: red;
-}

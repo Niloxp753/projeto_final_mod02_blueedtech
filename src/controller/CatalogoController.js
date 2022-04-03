@@ -1,43 +1,45 @@
+import { resolveInclude } from "ejs"
 import { hardwares } from "../model/pcgamer.js"
 
 let pcgamers
 
 export const getIndex = async (req, res) => {
     try {
-        pcgamers = await hardwares.findAll()
-        res.render('index.ejs', {
-            pcgamers
+        pcgamers = await hardwares.findAll({
+            order: [["modelo","ASC"]]
         })
-    }
-
-    catch(err){
-        console.log(err.message)
+        res.status(200).render('index.ejs', {
+            pcgamers,
+        })
+    } catch(err) {
+        res.status(500).send({
+            err: err.message
+        })
     }
 }
 
 export const getDetalhes = async (req, res) => {
     try {
         const pcgamer = await hardwares.findByPk(req.params.id)
-        res.render ('detalhes.ejs', {
+        res.status(200).render('detalhes.ejs', {
             pcgamer
         })
+        
+    } catch(err) {
+        res.status(500).send({
+            err: err.message
+        })
     }
-
-    catch(err) {
-        res.send(err.message)
-    }
-
 }
 
 export const postPesquisa = async (req, res) => {
     try {
-        pcgamers = await hardwares.findAll()
+         pcgamers = await hardwares.findAll()
         const pesquisa = req.body
         res.redirect('/')
+       
         
-    }
-
-    catch(err) {
+    } catch(err) {
         res.send(err.message)
     }
 
