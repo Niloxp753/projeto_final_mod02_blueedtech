@@ -98,6 +98,10 @@ button img{
     margin-left: 5px;
 }
 
+header img {
+    filter: invert(1);
+}
+
 .content {
     flex: 1;
     display: flex;
@@ -114,19 +118,47 @@ main {
     align-items: center;
 }
 
+main#error_page {
+    background-color: #171D2F;
+}
 
-/* nav.menu-items{
-    background: yellow;
+nav.menu-items {
+    background: #00C0AF;
     width: 20vw;
     height: 100vh;
     box-shadow: 10px 10px 20px black;
-    display: flex;
+    display: none;
     position: fixed;
-    left: 0;
     top: 0;
     z-index: 0;
+    right: 0;
+    text-align: center;
+}
 
-} */
+nav.menu-items ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50vh;
+}
+
+.btn_modal {
+    z-index: 1;
+}
+
+.btn_modal:hover {
+    cursor: pointer;
+}
+
+.icon_cart:hover {
+    cursor: pointer;
+}
+
+#icon_container {
+    display: flex;
+    gap: 20px;
+    margin-right: 20px;
+}
 
 footer {
     background: rgb(80, 78, 78);
@@ -205,14 +237,14 @@ li.card_data {
     top: 5px;
 }
 
-#card_edit:hover {
-    transform: scale(20px);
-}
-
 #card_trash {
     position: relative;
     top: 5px;
     left: 5px;
+}
+
+#card_trash:hover {
+    transform: scale(1.3);
 }
 
 input {

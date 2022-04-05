@@ -1,4 +1,5 @@
 
+import  Sequelize  from "sequelize"
 import { hardwares } from "../model/pcgamer.js"
 
 let pcgamers
@@ -33,10 +34,23 @@ export const getDetalhes = async (req, res) => {
 }
 
 export const postPesquisa = async (req, res) => {
+
     try {
-         pcgamers = await hardwares.findAll()
-        const pesquisa = req.body
-        res.status(200).redirect('/')
+        const pesquisa = req.body.pesquisar
+         pcgamers = await hardwares.findAll({
+             where: {
+                modelo: {
+                    [Sequelize.Op.iLike]: `%${pesquisa}%` 
+                }
+            }
+         })
+         
+        if (pcgamers.length > 0) {
+            res.status(200).render('index.ejs', {pcgamers})
+        } else {
+            res.status(404).render('404.ejs')
+        }
+       
        
         
     } catch(err) {
