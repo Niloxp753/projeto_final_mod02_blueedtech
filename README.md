@@ -15,10 +15,13 @@
 
 #### LINGUAGENS UTILIZADAS:
 
+<style>
+  <div display: flex>
 <img align="center" alt="HTML" height="40" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
 <img align="center" alt="CSS" height="40" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
 <img align="center" alt="Nodejs" height="40" width="40" src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg">
 <img align="center" alt="Express" height="40" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg">
 <img align="center" alt="Nodemon" height="40" width="40" src="https://cdn.iconscout.com/icon/free/png-256/nodemon-3627182-3029590.png">
-
+  </div>
+</style>
 
