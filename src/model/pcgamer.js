@@ -36,3 +36,9 @@ export const hardwares = connection.define("hardwares", {
     updateAt: false,
     timestamps: false
 })
+
+const initTable = async () => {
+    await hardwares.sync()
+}
+
+initTable()
