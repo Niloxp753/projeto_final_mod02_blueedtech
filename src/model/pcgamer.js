@@ -1,7 +1,9 @@
 import Sequelize from 'sequelize'
-import { connection } from '../database/connection.js'
+import {
+    connection
+} from '../database/connection.js'
 
-export const hardwares = connection.define("hardwares",{
+export const hardwares = connection.define("hardwares", {
     id: {
         type: Sequelize.INTEGER,
         allowNull: false,

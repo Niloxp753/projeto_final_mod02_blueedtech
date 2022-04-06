@@ -1,5 +1,14 @@
 import express from 'express'
-import { getDeletar, getDetalhes, getIndex, postPesquisa, getCriar, postCriar, getEditar, postEditar } from '../controller/CatalogoController.js'
+import {
+    getDeletar,
+    getDetalhes,
+    getIndex,
+    postPesquisa,
+    getCriar,
+    postCriar,
+    getEditar,
+    postEditar
+} from '../controller/CatalogoController.js'
 
 export const routes = express.Router()
 
