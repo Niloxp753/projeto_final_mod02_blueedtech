@@ -1,4 +1,5 @@
 # projeto_final_mod02_blueedtech
 
-<img src="https://user-images.githubusercontent.com/97798047/161893473-6f238931-c8b8-4dc4-a9fb-13931b8028bf.png" type='Print do site'>
-<img src=https://user-images.githubusercontent.com/97798047/161893883-eaffbc69-fa40-4f01-bfa2-99342b4889c4.png>
+<img src="https://user-images.githubusercontent.com/97798047/161894086-a29d4ca9-4e67-476b-9f14-17b01161aad9.png" type="Pagina Inicial do Projeto">
+<img src="https://user-images.githubusercontent.com/97798047/161894135-0bba0b6a-1f4e-4dc6-ba4e-42b672439d59.png" type="Pagina de Detalhes do Projeto">
+
