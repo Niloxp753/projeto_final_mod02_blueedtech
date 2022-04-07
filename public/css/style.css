@@ -179,7 +179,7 @@ footer {
     background: rgb(80, 78, 78);
     color: #fff;
     height: 10vh;
-    align-content: center;
+    align-items: center;
     justify-content: center;
     display: flex;
     box-shadow: 10px 10px 20px rgb(59, 59, 59);
