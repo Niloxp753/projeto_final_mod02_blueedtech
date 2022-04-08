@@ -1,4 +1,5 @@
 import Sequelize from "sequelize"
+
 import {
     hardwares
 } from "../model/pcgamer.js"
