@@ -23,3 +23,7 @@
 </div>
 
 
+## Dados do Certificado
+<li>Linguagem: JavaScript</li>
+<li>Tecnologias: Express, HTML, CSS e MVC</li>
+<li>Carga horária: 40 horas</li>
